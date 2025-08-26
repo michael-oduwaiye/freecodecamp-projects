@@ -35,8 +35,8 @@ fieldset {
   border-bottom: 3px solid #3b3b4f;
 }
 
-fieldset:last-of-type {
-  border-bottom: none;
+fieldset:last-of-type { /* this is a CSS pseudo-class. It targets the last "fieldset" element */
+  border-bottom: none; /* this will remove the border line only in the last fieldset of the form, for more good appearance. */
 }
 
 label {
@@ -53,15 +53,16 @@ select {
 }
 
 input, textarea {
-  background-color: #0a0a23;
+  background-color: #0a0a23; /* changes the default white color of the input and textarea boxex */
   border: 1px solid #0a0a23;
   color: #ffffff;
+  min-height: 2em; /* this sets the height of the input and textarea boxes equal to 2 * current font size of the parent element */
 }
 
 .inline {
-  width: unset;
-  margin: 0 0.5em 0 0;
-  vertical-align: middle;
+  width: unset; /* this will remove the earlier rule that set all the input elements to "width: 100%". It will bring both the input & label element together. */
+  margin: 0 0.5em 0 0; /* this will set the margin to be equal = 0.5 * current font-size of the parent element */
+  vertical-align: middle; /* this aligns this input element to the middle vertically */
 }
 
 input[type="submit"] {
