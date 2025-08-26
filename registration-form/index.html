@@ -15,8 +15,10 @@
     <p>Please fill out this form with the required information</p>
 
     <form method="post" action='https://register-demo.freecodecamp.org'>
-              <!-- I first created three fieldset elements-->
-      <fieldset> <!-- Note: The default input type is text, if not specified-->
+      <!-- I first created three fieldset elements. Note: The default input type is text, if not specified-->
+       
+      <fieldset>
+        <!-- The name attribute is used to identify the element in the form submission. So, it's a good practice to include them in.-->
         <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
         <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
         <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label> <!-- Setting the type attribute to email will only allow email with "@" and "." in the domain-->
@@ -55,6 +57,6 @@
       </label>
       <input type="submit" value="Submit" />
     </form>
-
+          <!-- The HTML for the registration form finishes here. We move on now to the styling-->
   </body>
 </html>
