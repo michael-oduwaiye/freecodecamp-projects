@@ -9,21 +9,29 @@ body {
 }
 
 h1, p {
-  margin: 1em auto;
+  margin: 1em auto; /* 1em = the current font size of the element. In this case, 1em = 16px. "em" is a relative unit of measurement. */
   text-align: center;
 }
 
 form {
-  width: 60vw;
-  max-width: 500px;
-  min-width: 300px;
-  margin: 0 auto;
+  width: 60vw; /* this sets the form's width to 60% of the viewport width. This makes the form responsive to the browser window size. */
+  max-width: 500px; /* this ensures the form's width doesn't exceed 500 pixels, preventing it from getting too wide on large screens. */
+  min-width: 300px; /* this ensures the form's width doesn't fall below 300 pixels, so it remains readable on small screens. */
+  margin: 0 auto; /* this centers the form. Centers the form horizontally by setting equal left and right margins. The '0' sets the top and bottom margins to zero. */
   padding-bottom: 2em;
 }
 
 fieldset {
-  border: none;
-  padding: 2rem 0;
+  border: none; /* this removes the default border line around the fieldset */
+  padding: 2rem 0; /* this adds padding of 2rem (which is equal to the font size of the root(html) element):
+  Example
+  html {
+    font-size: 16px; // root element
+}
+  p {
+    font-size: 2rem; // 2 * root font size (16px) = 32px
+} */
+ 
   border-bottom: 3px solid #3b3b4f;
 }
 
