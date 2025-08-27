@@ -18,12 +18,12 @@ form {
   max-width: 500px; /* this ensures the form's width doesn't exceed 500 pixels, preventing it from getting too wide on large screens. */
   min-width: 300px; /* this ensures the form's width doesn't fall below 300 pixels, so it remains readable on small screens. */
   margin: 0 auto; /* this centers the form. Centers the form horizontally by setting equal left and right margins. The '0' sets the top and bottom margins to zero. */
-  padding-bottom: 2em;
+  padding-bottom: 2em; /* this equals 2 * the current font size of the form element. This will leave some little space at the bottom of the submit button */
 }
 
 fieldset {
   border: none; /* this removes the default border line around the fieldset */
-  padding: 2rem 0; /* this adds padding of 2rem (which is equal to the font size of the root(html) element):
+  padding: 2rem 0; /* this adds padding of 2rem (which is equal to 2 * the font size of the root(html) element):
   Example
   html {
     font-size: 16px; // root element
@@ -49,14 +49,14 @@ textarea,
 select {
   margin: 10px 0 0 0;
   width: 100%;
-  min-height: 2em;
+  min-height: 2em; /* this property was actually moved from the input, textarea rule and pasted here. This is because we also want the "select" element to have the same min-height as the input & textarea. */
 }
 
 input, textarea {
   background-color: #0a0a23; /* changes the default white color of the input and textarea boxex */
   border: 1px solid #0a0a23;
   color: #ffffff;
-  min-height: 2em; /* this sets the height of the input and textarea boxes equal to 2 * current font size of the parent element */
+  min-height: 2em; /* this sets the height of the input and textarea boxes equal to 2 * current font size of the element */
 }
 
 .inline {
@@ -65,19 +65,24 @@ input, textarea {
   vertical-align: middle; /* this aligns this input element to the middle vertically */
 }
 
-input[type="submit"] {
-  display: block;
+input[type="submit"] { /* This is called an attribute selector. Note: using any other attribute like value="Submit" will not make your code to pass. */
+  display: block; /* this is what made the submit button to sit flush (level) against the left edge of its parent (form) */
   width: 60%;
-  margin: 1em auto;
-  height: 2em;
-  font-size: 1.1rem;
-  background-color: #3b3b4f;
+  margin: 1em auto; /* this centers the submit button just like the rest of the form */
+  height: 2em; /* this means 2 * current font size of the element */
+  font-size: 1.1rem; /* increases the font-size of the text submit relative to the size of the current font-size of the parent element (form) */
+  background-color: #3b3b4f; /* this gives the submit button a distinct look */
   border-color: white;
-  min-width: 300px;
+  min-width: 300px; /* this will make the width to never be below 300px */
 }
 
 input[type="file"] {
-  padding: 1px 2px;
+  padding: 1px 2px; /* this is the same CSS properties that most browsers inject in the other text input elements apart from this file input type */
+}
+
+
+a {
+  color: #dfdfe2; /* this changes the color of the link */
 }
 
 
