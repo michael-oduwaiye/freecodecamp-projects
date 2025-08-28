@@ -3,16 +3,42 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>SIWES Survey</title>
   </head>
   <body>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">This is a cetification project named "Survey Form" which is one of the must complete freeCodeCamp projects.</p>
+    <h1 id="title">KWASU SIWES Placement Survey Form</h1>
+    <p id="description">This is a cetification project named "KWASU SIWES Placement Survey Form". This form is to know the number of Computer Science students of KWASU who has found a placement in their individual states.</p>
 
     <form id="survey-form">
-      <label>Enter your name: <input id="name" type="text" required></label>
-      <label>Enter your email: <input id="email" type="email" required><label>
+      <fieldset>
+        <legend>Personal</legend>
+      <label>Enter your name: <input id="name" type="text" required placeholder="E.g Michael Oduwaiye"></label>
+      <label>Enter your email: <input id="email" type="email" required placeholder="example@gmail.com"><label> <!-- I will see an HTML5 validation error if I enter an email that is not formatted correctly. But we can't notice that yet. Why? I guess this is because we are yet to add a "Submit" button. Let's keep moving to confirm. -->
         <!-- Instruction 5 completed-->
+      <label>Number: <input id="number" type="number" min="0" max="10" placeholder="E.g 9"></label> <!-- the min & max attributes sets the range of the nunber input. -->
+      </fieldset>
+
+      <fieldset>
+        <legend>Placement</legend>
+        <label>Have you found a placement? <select id="dropdown">
+        <option>Yes</option>
+        <option>No</option>
+        </select>
+      </label>
+      </fieldset>
+
+      <fieldset>
+         <legend>Select all Institutions contacted</legend>
+      <label><input type="checkbox" value="contacted-institutions"> Hospital</label>
+      <label><input  type="checkbox" value="contacted-institutions"> Tech Institute (Academy)</label>
+      <label><input  type="checkbox" value="contacted-institutions"> Bank</label>
+      <label><input  type="checkbox" value="contacted-institutions"> Telecommunications</label>
+      <label>Share your experience with us!
+        <textarea placeholder="I visited a bank in my local branch..."></textarea>
+      </fieldset>
+          <input id="submit" type="submit">
+          <!-- I am done with the HTML structuring. Now to the styling. -->
     </form>
   </body>
 </html>
