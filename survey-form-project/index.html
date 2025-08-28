@@ -7,25 +7,31 @@
     <title>SIWES Survey</title>
   </head>
   <body>
-    <h1 id="title">KWASU SIWES Placement Survey Form</h1>
-    <p id="description">This is a cetification project named "KWASU SIWES Placement Survey Form". This form is to know the number of Computer Science students of KWASU who has found a placement in their individual states.</p>
+    <h1 id="title">KWASU SIWES Survey Form</h1>
+    <p id="description">This is a cetification project named "KWASU SIWES Survey Form". This form is to know the number of Computer Science students of KWASU who has found a placement in their individual states.</p>
 
     <form id="survey-form">
       <fieldset>
-        <legend>Personal</legend>
       <label>Enter your name: <input id="name" type="text" required placeholder="E.g Michael Oduwaiye"></label>
       <label>Enter your email: <input id="email" type="email" required placeholder="example@gmail.com"><label> <!-- I will see an HTML5 validation error if I enter an email that is not formatted correctly. But we can't notice that yet. Why? I guess this is because we are yet to add a "Submit" button. Let's keep moving to confirm. -->
         <!-- Instruction 5 completed-->
-      <label>Number: <input id="number" type="number" min="0" max="10" placeholder="E.g 9"></label> <!-- the min & max attributes sets the range of the nunber input. -->
+      <label>Number of Institution: <input id="number" type="number" min="0" max="10" placeholder="E.g 9"></label> <!-- the min & max attributes sets the range of the nunber input. -->
       </fieldset>
 
       <fieldset>
-        <legend>Placement</legend>
+        <legend>Placement (required)</legend>
         <label>Have you found a placement? <select id="dropdown">
-        <option>Yes</option>
-        <option>No</option>
+        <option>Yes, I have found a placement and started</option>
+        <option>No, still looking for a placement</option>
+        <option>Found a placement, but yet to start.</option>
         </select>
       </label>
+      </fieldset>
+
+      <fieldset>
+         <legend>Institution</legend>
+      <label><input type="radio" name="institution-type" value="institution"> Private Institution</label>
+      <label><input type="radio" name="institution-type" value="institution"> Public Institution</label>
       </fieldset>
 
       <fieldset>
@@ -35,8 +41,9 @@
       <label><input  type="checkbox" value="contacted-institutions"> Bank</label>
       <label><input  type="checkbox" value="contacted-institutions"> Telecommunications</label>
       <label>Share your experience with us!
-        <textarea placeholder="I visited a bank in my local branch..."></textarea>
+        <textarea id="experience" placeholder="I visited a bank in my local branch..."></textarea>
       </fieldset>
+      <label><input type="checkbox"> I accept that the information provided above are correct.</label>
           <input id="submit" type="submit">
           <!-- I am done with the HTML structuring. Now to the styling. -->
     </form>
