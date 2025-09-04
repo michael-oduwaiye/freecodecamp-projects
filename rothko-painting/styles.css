@@ -1,0 +1,50 @@
+.canvas {
+  width: 500px;
+  height: 600px;
+  background-color: #4d0f00;
+  overflow: hidden; /* we wrote this instead of the "padding: 1px;" because it changed the dimensions of the canvas to 502px by 602px. So, adding this rule will change the canvas back to its original dimension (which is 500px by 600px) */
+  filter: blur(2px);
+}
+
+.frame {
+  border: 50px solid black; /* this gives the painting a solid border line */
+  width: 500px; /* notice that we set the width of this frame to be equal to the width of the canvas for uniformity */
+  padding: 50px; /* This adds space between the frame and canvas classes. Note: this is a "padding" shorthand property for top, right, bottom & left */
+  margin: 20px auto; /* this adds a space of 20px to the top and bottom of the frame. We jave therefore given it the frame element a "vertical margin". Also, the auto horizontally center the frame on the page (right & left). */
+}
+
+.one {
+  width: 425px; /* we are using a smaller value because of the padding we have added earlier. */
+  height: 150px;
+  background-color: #efb762;
+  margin: 20px auto; /* the "auto" centers the "one" element horizontally. But its top margin is pushing past the canvas and onto the frame's border, shifting the entire canvas (painting) down 20 pixels. We can fix this by adding a padding of 1px to the canvas.
+  Question:why margin and padding? */
+  box-shadow: 0 0 3px 3px #efb762;
+  border-radius: 9px;
+  transform: rotate(-0.6deg);
+}
+
+.two {
+  width: 475px;
+  height: 200px;
+  background-color: #8f0401;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 3px 3px #8f0401;
+  border-radius: 8px 10px;
+  transform: rotate(0.4deg);
+}
+
+.one, .two {
+  filter: blur(1px);
+}
+
+.three {
+  width: 91%;
+  height: 28%;
+  background-color: #b20403;
+  margin: auto;
+  filter: blur(2px);
+  box-shadow: 0 0 5px 5px #b20403;
+  border-radius: 30px 25px 60px 12px;
+
+}
