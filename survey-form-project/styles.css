@@ -56,8 +56,7 @@ input[type="submit"] {
     margin: 20px auto;
     border-radius: 5px;
 }
-}
 
 fieldset:last-of-type {
     border: none;
-    
+}
