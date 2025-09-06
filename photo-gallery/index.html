@@ -7,23 +7,38 @@
     <link rel="stylesheet" href="./styles.css">
     <style>
         .container-test {
-            background-color: rgb(0, 0, 0);
-            width: 1000px;
+            background-color: rgb(230, 210, 100);
+            width: 800px;
             height: 600px;
             margin: 10px auto; 
             padding: 30px;
             border-radius: 25px;
+            margin-bottom: 100px;
         }
-        .gallery-test {
+        .color-red {
             background-color: red;
             width: 50%; /* This element will be 50% as wide as the .container-test element. In this case, it is 500px */
-            height: 300px;
-            margin: 10px auto;
+            height: 150px;
+            margin: 20px auto;
             border-radius: 8px;
-            
+        }
+        .color-green {
+          background-color: green;
+          width: 50%;
+          height: 150px;
+          margin: 20px auto;
+          border-radius: 8px;
+        }
+        .color-blue {
+          background-color: blue;
+          width: 50%;
+          height: 150px;
+          margin: 20px 186px 900px 186px; /* you won't see the effect of the margin-bottom yet until you stack another element over the blue color */
+          border-radius: 8px;
         }
     </style>
   </head>
+  
   <body>
     <header class="header">
       <h1>css flexbox photo gallery</h1>
@@ -42,7 +57,9 @@
 
                 <!-- #This is just to test-->
     <div class="container-test"> <!-- Let's say this is 1000px wide -->
-    <div class="gallery-test"></div>Red<!-- This will be 500px wide -->
+    <div class="color-red"></div><!-- This will be 500px wide -->
+    <div class="color-green"></div>
+    <div class="color-blue"></div>
 </div>
   </body>
 </html>

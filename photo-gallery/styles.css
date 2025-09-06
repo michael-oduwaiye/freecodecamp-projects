@@ -1,5 +1,5 @@
-* {
-  box-sizing: border-box;
+* { /* global selector */
+  box-sizing: border-box; /* this makes the content of the .gallery element to shrink to make room for the padding and border of the image element. Once this is defined, there's no need to define rule for both the .gallery & image element. Wow, this is interesting! */
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 .header {
   text-align: center;
   text-transform: uppercase;
-  padding: 32px;
+  padding: 32px; /* in this case, I think its parent is the body element */
   background-color: #0a0a23;
   color: #fff;
   border-bottom: 4px solid #fdb347;
@@ -27,13 +27,20 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px 10px;
-/*width: 50%; /* the visual effect of this is that the .gallery element will always be 50% as wide as the element that contains it (body), regardless of the screen size. */
+ /*width: 50%; /* Note: This was the initial rule. The visual effect of this is that the .gallery element will always be 50% as wide as the element that contains it (body), regardless of the screen size. This means that this element will assume half of the width of its parent, which in this case is the body element (whose width by default = 100% of the available width of the browser viewport.  */
 }
 
 .gallery img {
-  width: 100%;
-  max-width: 350px;
-  height: 300px;
+  width: 100%; /* This makes the imaged flexible (responsive). This is not only what made the img with border and padding fit within the .gallery element. Also, I think this makes the image element to fill the width of its parent element (.gallery) */
+  max-width: 350px; /* This makes the image to be at most 350px wide (prevents the image from stretching beyond 350px), but can shrink if necessary to fit within the .gallery element. The max-width suggests putting a limit so that the image never streches beyond 350px */
+
+    /* Together, this means the image will scale down for small screens but won't get ridiculously huge one large screens */
+
+    /* Why 350px: -this is because this value works well on most screen sizes while staying reading or visually balanced.
+                  -keeps consistency
+                  -a comfortable size for images in a gallery without overwhelming layout */
+
+  height: 300px; /* this will fix the image height at 300px for all images, creating a uniform size in the gallery. But it must be used carefully */
   object-fit: cover;
   border-radius: 10px;
 }
