@@ -18,14 +18,14 @@ body {
 }
 
 .gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  max-width: 1400px;
-  margin: 0 auto;
+  display: flex; /* this will make the element a flex container */
+  flex-direction: row; /* this is the default value */
+  flex-wrap: wrap; /* this will wrap the items to the next row/column when they run out of space even while on row */
+  justify-content: center; /* this aligns the flex (flexible) container's items when the items do not use all available space on the main-axis (which is horizontal) */
+  align-items: center; /* this aligns the flexible content along the cross axis (which is the vertical) */
+  gap: 16px; /* Note: this must be applied to the flex container (parent element) and not the flex items (child elements). This will create a gap of 16px between each image in the gallery. It is a CSS shorthand for "row-gap" and "column-gap" sub properties */
+  max-width: 1400px; /* Note: this is done to avoid elements stretching too wide on big monitors (but shrinks automatically on smaller screens). This is the maximum width the element can ever be. If the available space of the browser's widow is wider than 1400px, the element will stop growing and stay at 1400px wide so as to avoid getting too wide on large screens */
+  margin: 0 auto; /* this centers this .gallery element horizontally in the middle of the page */
   padding: 20px 10px;
  /*width: 50%; /* Note: This was the initial rule. The visual effect of this is that the .gallery element will always be 50% as wide as the element that contains it (body), regardless of the screen size. This means that this element will assume half of the width of its parent, which in this case is the body element (whose width by default = 100% of the available width of the browser viewport.  */
 }
@@ -41,11 +41,13 @@ body {
                   -a comfortable size for images in a gallery without overwhelming layout */
 
   height: 300px; /* this will fix the image height at 300px for all images, creating a uniform size in the gallery. But it must be used carefully */
-  object-fit: cover;
+  object-fit: cover; /* Note: before this declaration, some of the image were distorted because they all have different aspect ratios. This will tell the image to fill the img container (gallery) while maintaining aspect ratio of all the images at once (saving us the time of declaring the aspect ratio of each image), resulting in cropping to fit */
   border-radius: 10px;
 }
 
-.gallery::after {
-  content: "";
-  width: 350px;
+.gallery::after { 
+  /*Note: the "::after" is called a pseudo-element. It will create an element which will be the last child of the selected element (in this case .gallery). So, this pseudo-element can be used to create an empty element after the last image, to push the last image (which appears to be at the center) to the left */
+
+  content: ""; /* value set to an empty string */
+  width: 350px; /* remember when this was the image's max-width value (Check the .gallery img selector). */
 }

@@ -8,7 +8,7 @@
     <style>
         .container-test {
             background-color: rgb(230, 210, 100);
-            width: 800px;
+            width: 700px;
             height: 600px;
             margin: 10px auto; 
             padding: 30px;
@@ -17,7 +17,7 @@
         }
         .color-red {
             background-color: red;
-            width: 50%; /* This element will be 50% as wide as the .container-test element. In this case, it is 500px */
+            width: 50%; /* This element will be 50% as wide as the .container-test element. In this case, it is 3500px */
             height: 150px;
             margin: 20px auto;
             border-radius: 8px;
@@ -33,8 +33,13 @@
           background-color: blue;
           width: 50%;
           height: 150px;
-          margin: 20px 186px 900px 186px; /* you won't see the effect of the margin-bottom yet until you stack another element over the blue color */
+          /*margin: 20px 186px 900px 186px; /* you won't see the effect of the margin-bottom yet until you stack another element over the blue color */
+          margin: 20px auto; /* this saves the day */
           border-radius: 8px;
+        }
+        .justify, .footer-appreciation {
+          display: flex;
+          justify-content: center; /* yes, it works. You just have to declare the display propery first before declaring this */
         }
     </style>
   </head>
@@ -44,22 +49,30 @@
       <h1>css flexbox photo gallery</h1>
     </header>
     <div class="gallery"> <!-- The images will be displayed on top one another in a single column. -->
-      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
-      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg">
-      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg">
-      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg">
-      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg">
-      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg">
-      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg">
-      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg">
-      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" alt="Cat One">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg" alt="Cat Two">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg" alt="Cat Three">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg" alt="Cat Four">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg" alt="Cat Five">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg" alt="Cat Six">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg" alt="Cat Seven">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg" alt="Cat Eight">
+      <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg" alt="Cat Nine"> <!-- this marks the end of the "Photo Gallery web page"-->
     </div>
 
                 <!-- #This is just to test-->
-    <div class="container-test"> <!-- Let's say this is 1000px wide -->
+<div class="container-test"> <!-- Let's say this is 1000px wide -->
     <div class="color-red"></div><!-- This will be 500px wide -->
     <div class="color-green"></div>
     <div class="color-blue"></div>
 </div>
+    
+    <div class="justify">
+      <span>Let's see how this text behaves</span>
+    </div>
+
+    <!-- Appreciation to FreeCodeCamp -->
+    <footer class="footer-appreciation">
+      <p>Created by <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">FreeCodeCamp</a></p>
   </body>
 </html>
