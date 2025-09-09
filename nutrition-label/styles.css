@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box; /* this fixes the additional sizes on elements with padding and border */
+}
+
+html {
+  font-size: 16px; /* why html and not body?:
+  This is because of the rem-based sizes. It makes scalling the entire site's typography easier. Even if you declare it in the body, when rem units are used, it is still bases on html's font-size, not body's  */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif; /* always remember to put the font name with space in quotes. Note the use of fallback */
+}
+
+.label {
+  border: 2px solid black;
+  width: 270px; /* this size will increase on the browser. 
+  This is because, by default, the browser includes the border and padding when determining the size of an element. This can be fixed/solved using the universal or global selector */
+  margin: 20px auto;
+  padding: 0 7px;
+}
+
+header h1 { /* the font-weight property was removed from this selector in order to add it inside the declared ".bold" selector. Bolding a text is used to be used to draw user's attention to some particular text and not all text. This showcases several approaches in typography (the art of styling a text) */
+  text-align: center;
+  margin: -4px 0;
+  letter-spacing: 0.15px
+}
+
+p {
+  margin: 0; /* this removes those default spaces around the paragraph element */
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.large {
+  height: 10px;
+}
+
+.large, .medium {
+  background-color: black;
+  border: 0;
+}
+
+.medium {
+  height: 5px;
+}
+
+.small-text {
+  font-size: 0.85rem;
+}
+
+
+.calories-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.calories-info h2 {
+  margin: 0;
+}
+
+.left-container p {
+  margin: -5px -2px;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.calories-info span {
+  margin: -7px -2px;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+.double-indent {
+  margin-left: 2em;
+}
+
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+}
