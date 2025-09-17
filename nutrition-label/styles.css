@@ -94,7 +94,7 @@ p {
   margin-left: 2em;
 }
 
-.daily-value p:not(.no-divider) {
+.daily-value p:not(.no-divider) { /* the :not pseudo-class is used to exclude an element with a particular class (.no-divider) from being selected */
   border-bottom: 1px solid #888989;
 }
 
