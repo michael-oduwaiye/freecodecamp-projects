@@ -24,7 +24,7 @@ header h1 /*this is to specifically target h1 element within the header */ {
   /* the font-weight property was removed from this selector in order to add it inside the declared ".bold" selector. Bolding a text is used to be used to draw user's attention to some particular text and not all text. This showcases several approaches in typography (the art of styling a text) */
   text-align: center;
   margin: -4px 0;
-  letter-spacing: 0.15px
+  letter-spacing: 0.15px;
 }
 
 p {
