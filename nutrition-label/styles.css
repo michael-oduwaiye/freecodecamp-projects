@@ -56,38 +56,38 @@ p {
 }
 
 .small-text {
-  font-size: 0.85rem;
+  font-size: 0.85rem; /* which is equal to 13.6px. The rem unit stand for "root em" whose size is relative to the font-size of the root html element. I observe that this unit is mostly associated to font-size */
 }
 
 
 .calories-info {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: space-between;/* this creates space btw the text Calories & 230 */
+  align-items: flex-end; /* this makes the 230 to align horizontally with Calories */
 }
 
-.calories-info h2 {
+.calories-info h2 { /*this declaration is made to target h2 */
   margin: 0;
 }
 
-.left-container p {
+.left-container p { /* this targets the word "Calories" in the <p> */
   margin: -5px -2px;
-  font-size: 2em;
-  font-weight: 700;
+  font-size: 2em; /*that is equal to 2 * 16px */
+  font-weight: 700; /* remember the value of the font-weight property does not have a common unis like px,cm...*/
 }
 
-.calories-info span {
-  margin: -7px -2px;
+.calories-info span { /* this targets the last element (span) of the parent element called .calories-info */
+  margin: -7px -2px; /* we added negative margin to move the text (230) up and right */
   font-size: 2.4em;
   font-weight: 700;
 }
 
 .right {
-  justify-content: flex-end;
+  justify-content: flex-end; /* this moves the text (% Daily Value) to the right */
 }
 
 .indent {
-  margin-left: 1em;
+  margin-left: 1em; /* this means 1 * 16px (font-size of the element where it's used)  = 16px */
 }
 
 .double-indent {
