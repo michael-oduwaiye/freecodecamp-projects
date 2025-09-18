@@ -99,6 +99,11 @@ p {
 }
 
 .note {
-  font-size: 0.6rem;
+  font-size: 0.6rem; /* this reduces the font-size to 60% of the root elements' main font-size */
   margin: 5px 0;
+  padding: 0 8px;
 }
+
+/* This marks the end of the CSS file
+  Appreciation to freeCodeCamp for the project idea
+*/
